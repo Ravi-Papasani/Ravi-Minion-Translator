@@ -2,6 +2,10 @@
     --primary-color: #FCD34D;
 }
 
+body {
+    margin: 0;
+}
+
 #txt-input {
     width: 80%;
     height: 10vh;
