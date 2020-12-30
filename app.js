@@ -4,9 +4,13 @@ var outPutDiv = document.querySelector("#output");
 
 var serverURl = "https://lessonfourapi.tanaypratap.repl.co/translate/yoda.json"
 
-//  var serverURL = "https://lessonfourapi.tanaypratap.repl.co/translate/yoda.json"
 function getTranslatorURL(text) {
     return serverURl + "?" + "text=" + text
+}
+
+function errorHandler(error) {
+    console.log("error occured", error);
+    alert("something went wrong with server, try again after some time!");
 }
 
 function clickEventHandler() {
@@ -14,12 +18,12 @@ function clickEventHandler() {
     var inputText = textInput.value;
 
     //processing the input by calling the server to fetch data
-    fetch(getTranslatorURL(textInput))
+    fetch(getTranslatorURL(inputText))
         .then(response => response.json())
-        .then(json => console.log(json))
+        .then(json => console.log(json.contents.translated))
+        .catch(errorHandler)
 
     //output the response
-
     // outPutDiv.innerText = "acsdtfadfuasgj " + textInput.value;
 
 };
