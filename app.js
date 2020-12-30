@@ -1,9 +1,14 @@
- //Input
- var userName = prompt('Enter your name!');
+//button tag used id as attribute then .queryselector has #
+var btnTranslator = document.querySelector("#btn-translator");
+console.log(btnTranslator);
 
- //Processing
- var welcomeMessage = "welcome to Vanilla Js learnings, " + userName;
+var textInput = document.querySelector("#txt-input");
 
- //Output
- alert(welcomeMessage);
 
+function clickEventHandler() {
+    console.log("you clicked me");
+    console.log("Input " + textInput.value);
+};
+
+//Hey Button when I clicked, perform call back function, and that function is clickEventHandler() here
+btnTranslator.addEventListener("click", clickEventHandler);
