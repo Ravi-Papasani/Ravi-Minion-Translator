@@ -1,0 +1,88 @@
+:root {
+    --primary-color: #FCD34D;
+}
+
+#txt-input {
+    width: 80%;
+    height: 10vh;
+    display: block;
+    margin: 3rem;
+    padding: 3rem;
+    color: black;
+    border: 1px solid black;
+}
+
+
+#output {
+    margin: 3rem;
+    padding: 1rem;
+    box-sizing: content-box;
+    width: 80%;
+    min-height: 10vh;
+    max-height: 20vh;
+    overflow: scroll;
+    border: 1px solid black;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    min-height: 100px;
+    margin: auto;
+    word-wrap: break-word;
+    padding: 0 20px;
+}
+
+.sec-center {
+    text-align: center;
+}
+
+#btn-translator {
+    background-color: var(--primary-color);
+    text-align: center;
+    font-weight: inherit;
+    border: 1px solid black;
+    padding: 1rem 1rem;
+}
+
+.navigation {
+    background-color: var(--primary-color);
+    padding: 1rem 1rem;
+    text-align: center;
+    border-top-right-radius: 1rem;
+    padding: 3rem 1rem;
+}
+
+.navigation .app-name {
+    font-weight: bold;
+    font-family: 'Lobster';
+    font-size: 3rem;
+    text-align: center;
+}
+
+.footer {
+    background-color: var(--primary-color);
+    padding: 1rem 1rem;
+    text-align: center;
+    border-top-right-radius: 1rem;
+}
+
+.footer .footer-abt-minion {
+    font-weight: bold;
+    font-family: 'Lobster';
+    font-size: 3rem;
+    text-align: center;
+}
+
+.footer .footer-paragraph {
+    font-weight: bold;
+    font-size: 2rem;
+    color: black;
+    padding: 0.5rem 1rem;
+
+}
+
+.footer .footer-source {
+    font-size: 1rem;
+    color: black;
+}

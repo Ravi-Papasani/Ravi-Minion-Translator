@@ -2,10 +2,13 @@ var btnTranslator = document.querySelector("#btn-translator");
 var textInput = document.querySelector("#txt-input");
 var outPutDiv = document.querySelector("#output");
 
-var serverURl = "https://lessonfourapi.tanaypratap.repl.co/translate/yoda.json"
+// var serverURl = "https://lessonfourapi.tanaypratap.repl.co/translate/yoda.json"
+
+var serverURl = "https://api.funtranslations.com/translate/minion.json"
+
 
 function getTranslatorURL(text) {
-    return serverURl + "?" + "text=" + text
+    return serverURl + "?" + "text=" + text;
 }
 
 function errorHandler(error) {
@@ -17,15 +20,14 @@ function clickEventHandler() {
     //taking input from user
     var inputText = textInput.value;
 
-    //processing the input by calling the server to fetch data
+    //processing the input by calling the server to fetch data and storing the output transalated text in transalatedText variable.
     fetch(getTranslatorURL(inputText))
         .then(response => response.json())
-        .then(json => console.log(json.contents.translated))
+        .then(json => {
+            var transalatedText = json.contents.translated;
+            outPutDiv.innerText = transalatedText; //output response
+        })
         .catch(errorHandler)
-
-    //output the response
-    // outPutDiv.innerText = "acsdtfadfuasgj " + textInput.value;
-
 };
 
 btnTranslator.addEventListener("click", clickEventHandler);

@@ -5,33 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>English to Minion Language Translator</title>
-    <style>
-        textarea {
-            width: 80%;
-            height: 10vh;
-            display: block;
-            margin: 1rem;
-            padding: 1rem;
-        }
-
-        #output {
-            border: 1px solid black;
-            height: 10vh;
-            width: 80%;
-            margin: 1rem;
-            padding: 1rem;
-        }
-    </style>
+    <link href="styles.css" rel="stylesheet">
 </head>
 
 <body>
-    <h1>Minion Translator</h1>
-    <textarea id="txt-input"
-        placeholder="Enter your text here in English, We will converts into Minion language"></textarea>
-    <button id="btn-translator">Translator</button>
 
-    <div style="font-size: larger;"> Output will come here 👇</div>
-    <div id="output"></div>
+    <nav class="navigation ">
+        <div class="app-name">Minion Language Translator</div>
+    </nav>
+
+    <section class="sec-center container">
+        <textarea id="txt-input"
+            placeholder="Put your text here in English, and click on the Translate To Minion button"></textarea>
+        <button id="btn-translator">Translate To Minion</button>
+        <h3>Your translated text in Minion language👇</h3>
+        <div id="output"></div>
+    </section>
+
+
+    <footer class="footer">
+        <div class="footer-abt-minion">About Minion Language
+            <p class="footer-paragraph">Minion language is spoken by the minions in Despicable Me (Despicable Me is an
+                animated media franchise produced by Illumination and distributed by Universal Pictures). Minion is a
+                registered trademark of Universal Studios. Minion language is actually lots of languages.</p>
+            <small class="footer-source"> Source :: funtranslations.com</small>
+        </div>
+    </footer>
 
     <script src="app.js" type="text/javascript"></script>
 </body>
